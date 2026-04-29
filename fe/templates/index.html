@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Welcome to Commodity Price Prediction</h1>
+    <p>Enter commodity name and number of days to predict prices:</p>
+    <form action="/get_prices" method="post">
+        <label for="commodity_name">Commodity Name:</label><br>
+        <input type="text" id="commodity_name" name="commodity_name"><br>
+        <label for="num_days">Number of Days:</label><br>
+        <input type="number" id="num_days" name="num_days"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Add the button for weather forecast page -->
+    <a href="/weather_forecast"><button>Weather Forecast</button></a>
+</body>
+</html>
